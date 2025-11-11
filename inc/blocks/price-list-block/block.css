@@ -1,0 +1,125 @@
+    .container {
+    /* width: 100%; */
+    /* max-width: 100%; */
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .price-list {
+    /* margin-bottom: 40px; */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+ .container div:last-child{
+    margin-bottom: 40px;
+ }
+
+  .price-list h2,.price-list h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0 15px;
+  }
+  
+  .price-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 0;
+    table-layout: fixed;
+  }
+  
+  .price-list thead tr {
+    background-color: var(--primary) !important;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .price-list td {
+    padding: 12px 8px;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  .price-list thead td,
+  .price-list tbody .title_row {
+    text-align: center;
+  }
+
+  .price-list tbody tr {
+    border-bottom: 2px solid var(--hover);
+    transition: all 0.3s ease;
+  }
+
+  .price-list .title_row {
+    width: 20%;
+  }
+  
+  .price-list .mobile_title {
+    display: none;
+    font-weight: bold;
+    text-align: center !important;
+    background-color: #f8f9fa;
+  }
+  
+  /* Стили для скрытых строк */
+  .price-list tbody tr.hidden-row {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .price-list {
+      width: 100%;
+      overflow-x: visible;
+    }
+    
+    .price-list table {
+      display: table;
+      width: 100%;
+    }
+    
+    .price-list thead td:first-child,
+    .price-list tbody .title_row {
+      display: none;
+    }
+    
+    .price-list .mobile_title {
+      display: table-row;
+    }
+
+    .price-list td {
+      width: auto !important;
+    }
+  }
+
+  .show-more-btn {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .show-more-btn:hover {
+    opacity: 0.9;
+  }
+  
+  .show-less-btn {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .show-less-btn:hover {
+    opacity: 0.9;
+  }
+  

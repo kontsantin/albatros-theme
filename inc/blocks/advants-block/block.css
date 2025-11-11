@@ -1,0 +1,177 @@
+.advants-block {
+    padding: 40px 0px;
+}
+.advants-block .wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+    padding-top: 20px;
+}
+.advants-block .wrapper.reversed {
+    flex-direction: column;
+    gap: 40px;
+}
+.advants-block .advants-left-side {
+    display: flex;
+    flex-direction: column;
+    width: 36%;
+    position: sticky;
+    top: 120px;
+    height: fit-content;
+}
+.advants-block .wrapper.reversed .advants-left-side {
+    width: 100%;
+    position: static;
+}
+.advants-block .advants-img {
+    width: 100%;
+    height: auto;
+    max-height: 210px;
+    overflow: hidden;
+    display: flex;
+}
+.advants-block .advants-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+.advants-block .advants {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px 30px;
+    width: 64%;
+}
+.advants-block .wrapper.reversed .advants {
+    width: 100%;
+}
+.advants-block .main-title {
+    margin-bottom: 20px;
+	text-align:center;
+}
+.advants-block .main-title,
+.advants-block .main-title span {
+    font-size: 32px;
+    font-family: var(--fontFamily);
+}
+.advants-block .main-title span {
+    white-space: nowrap;
+}
+.advants-block .advant-item {
+    display: flex;
+    flex-direction: column;
+    background: var(--background);
+    padding: 60px 30px 30px 30px;
+    border-radius: 20px;
+    position: relative;
+}
+.advants-block .advants.three .advant-item:last-of-type {
+    grid-column: 1 / -1;
+}
+.advants-block .advant-icon {
+    background: var(--background-2);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 30px;
+    top: -25px;
+    border-radius: 15px;
+}
+.advants-block .advant-icon svg,
+.advants-block .advant-icon img {
+    width: auto;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    max-width: 70%;
+    max-height: 70%;
+}
+.advants-block .advant-title {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-family: var(--fontFamily);
+}
+.advants-block .advant-desc {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    color: var(--text);
+    font-family: var(--fontFamily);
+}
+
+
+@media (max-width: 1200px) {
+    .advants-block .main-title, .advants-block .main-title span {
+        font-size: 32px;
+    }
+    .advants-block .wrapper {
+        gap: 20px;
+    }
+    .advants-block .advant-item {
+        padding: 40px 15px 15px 15px;
+    }
+    .advants-block .advant-title {
+        font-size: 18px;
+    }
+    .advants-block .advants {
+        gap: 30px 15px;
+    }
+    .advants-block .advant-icon {
+        width: 40px;
+        height: 40px;
+        top: -20px;
+        left: 15px;
+        border-radius: 10px;
+    }
+}
+.advants-block .main-title{
+	font-size:19px;
+}
+@media (max-width: 996px) {
+    .advants-block .wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .advants-block .advants {
+        width: 100%;
+    }
+    .advants-block .advants-left-side {
+        width: 100%;
+        position: static;
+    }
+    .advants-block {
+        padding: 30px 0px;
+    }
+}
+
+@media (max-width: 768px) {
+    .advants-block .main-title, .advants-block .main-title span {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    .advants-block .main-title, .advants-block .main-title span {
+        font-size: 24px;
+    }
+    .advants-block .advant-title {
+        font-size: 16px;
+    }
+    .advants-block .advant-desc {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 498px) {
+    .advants-block .advants {
+        display: flex;
+        flex-direction: column;
+    }
+}

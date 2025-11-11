@@ -1,0 +1,71 @@
+#services-block {
+  padding: 100px 0;
+  background: var(--background);
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+#services-block .services__container {
+  display: flex;
+  gap: 20px;
+  position: relative;
+}
+#services-block .services__left {
+  max-width: 500px;
+  position: sticky;
+  top: 200px;
+  height: 100%;
+}
+#services-block .services__descr {
+  margin-bottom: 40px;
+  color: var(--text);
+}
+#services-block .services__btn {
+  background: var(--background);
+}
+
+#services-block .services__btn:hover {
+  background: var(--hover);
+  color: var(--white);
+}
+
+@media (max-width: 1440px) {
+  #services-block .services__container {
+    flex-direction: column;
+  }
+  #services-block .services__left {
+    position: static;
+    max-width: 100%;
+  }
+  #services-block .main-title, #services-block .services__descr {
+    text-align: center;
+  }
+  #services-block .services__btn {
+    margin: 0px auto;
+  }
+}
+
+
+@media (max-width: 996px) {
+  #services-block {
+    padding: 30px 0 !important;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .services__list .item__text {
+    padding: 15px;
+  }
+  .services__list .item__btn svg {
+    width: 30px;
+    height: 30px;
+  }
+  .services__list .item__btn {
+    font-size: 14px;
+  }
+  #services-block .services__descr {
+    margin-bottom: 10px;
+  }
+}
+/*# sourceMappingURL=block.css.map */

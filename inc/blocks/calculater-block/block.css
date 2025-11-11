@@ -1,0 +1,183 @@
+.calcuiator-block .form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.calcuiator-block .form-wrapper .form-wrapper__top {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.calcuiator-block .form-wrapper .form-wrapper__top .form-wrapper__calculater {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 3px solid #aab1d6;
+    padding: 40px 30px;
+}
+
+.calcuiator-block .form-wrapper .form-wrapper__top .form-wrapper__calculater .calculater-top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    row-gap: 15px;
+}
+
+@media (max-width:615px) {
+    .calcuiator-block .form-wrapper .form-wrapper__top .form-wrapper__calculater .calculater-top {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.calcuiator-block .input-item {
+    width: 100%;
+    height: 38px;
+    background-color: #ffffff;
+    border: 1px solid #a3a3a3;
+    padding: 10px 15px;
+    outline: none !important;
+    border-radius: 0;
+    margin: 0;
+}
+
+.input-item.error {
+    /* border-color: 1px solid red !important;  */
+    border: 1px solid red !important;
+}
+
+.calcuiator-block .form-wrapper .form-wrapper__top .form-wrapper__calculater .calculater-bot {
+    display: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.calcuiator-block .form-wrapper .form-wrapper__top .form-wrapper__calculater .calculater-bot .calculater-bot__answer {
+    display: flex;
+    gap: 10px;
+    font-size: 18px;
+    line-height: 20px;
+    color: #3c3c3c;
+    font-weight: 600;
+}
+
+.calcuiator-block .form-wrapper .form-wrapper__top .form-wrapper__calculater .calculater-bot .calculater-bot__answer #result-answer {
+    color: var(--primary);
+    ;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.calcuiator-block .form-wrapper .form-wrapper__top .form-wrapper__calculater .callback-privacy {
+    color: var(--primary);
+    ;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.calcuiator-block .call-back {
+    cursor: pointer;
+    height: 38px;
+    border: 0;
+    background: var(--primary);
+    ;
+    color: #fff;
+    text-decoration: none;
+    font-weight: normal !important;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: 4%;
+    padding: 10px 10px 8px 20px;
+}
+
+.calcuiator-block .call-back:after {
+    content: "";
+    position: absolute;
+    background: url(./images/after.png) no-repeat;
+    width: 33px;
+    height: 38px;
+    right: -33px;
+    top: 0;
+    background-size: 100% 100%;
+    filter: brightness(0) saturate(100%) invert(18%) sepia(90%) saturate(6963%) hue-rotate(218deg) brightness(102%) contrast(103%);
+}
+
+.calculator-bot__policy p {
+    color: #888888;
+    font-size: 12px;
+}
+
+.calcuiator-block .form-wrapper .form-wrapper__bot {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.calcuiator-block .form-wrapper .form-wrapper__bot .form-wrapper__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.calcuiator-block .form-wrapper .form-wrapper__bot .form-wrapper__inputs .input-group {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.calcuiator-block .form-wrapper .form-wrapper__bot .form-wrapper__inputs .input-group label {
+    font-weight: bold;
+}
+
+.calcuiator-block textarea {
+    margin: 0;
+    resize: none;
+}
+
+.calcuiator-block .form-wrapper__button {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.calcuiator-block .form-wrapper__button .form-wrapper__privacy {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.calcuiator-block .form-wrapper__button .form-wrapper__privacy p {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #737373;
+}
+
+.calcuiator-block .form-wrapper__button .checkbox {
+    display: flex;
+    gap: 10px;
+}
+
+
+.calcuiator-block .form-wrapper__button .checkbox input {
+    padding: 0;
+    margin: 0;
+    width: auto;
+}
+
+ button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

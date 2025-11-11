@@ -1,0 +1,136 @@
+#problems-block {
+    table {
+        width: 100%;
+        // border-collapse: collapse;
+        border-collapse: separate;
+
+        border-spacing: 20px;
+    }
+
+    th,
+    td {
+        // border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+        border-radius: 10px;
+        background-color: var(--white);
+    }
+
+    th {
+        // background-color: #f4f4f4;
+        padding: 25px 40px;
+        text-align: start;
+    }
+
+    tr:nth-child(even) {
+        // background-color: #f9f9f9;
+    }
+
+    tr td:first-child {
+        padding: 32px 40px;
+        text-align: left;
+
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+        width: 41, 5%;
+    }
+
+    tr td:nth-child(2) {
+        position: relative;
+
+        &:before {
+            content: '';
+            width: 30px;
+            height: 30px;
+            left: 20px;
+            top: 28px;
+            position: absolute;
+            background: url(./images/problems-bad.svg);
+        }
+    }
+
+    tr td:nth-child(3) {
+        position: relative;
+
+        &:before {
+            content: '';
+            width: 30px;
+            height: 30px;
+            left: 20px;
+            top: 28px;
+            position: absolute;
+            background: url(./images/problems-good.svg);
+        }
+    }
+
+    tr td {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 19.6px;
+        text-align: left;
+        padding: 13px 65px;
+        padding-right: 20px;
+    }
+    .company-logo {
+        max-width: 50px;
+        max-height: 80px;
+        min-width: 50px;
+        min-height: 80px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+#problems-block .problems {
+    &__wrapper {
+        background: var(--background);
+        padding: 40px 20px;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    
+
+    &__company {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1150px) {
+    #problems-block tr td:nth-child(2):before,
+    #problems-block tr td:nth-child(3):before
+     {
+        content: none;
+    }
+    #problems-block tr td {
+        padding-left: 20px;
+    }
+    #problems-block th {
+        padding: 20px;
+        width: unset;
+        font-size: 16px;
+    }
+    #problems-block .company-name {
+        font-size: 16px;
+    }
+    #problems-block .problems__wrapper {
+        padding: 30px 10px;
+    }
+    #problems-block tr td:first-child {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 620px) {
+    #problems-block .problems__wrapper {
+        overflow: scroll;
+    }
+}

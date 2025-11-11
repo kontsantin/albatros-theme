@@ -1,0 +1,180 @@
+#text-block {
+    .text {
+        &__left {}
+
+        &__right {
+            padding-top: 20px;
+            padding-left: 30px;
+
+        }
+
+        &__title {
+            margin-bottom: 62px;
+        }
+
+        &__descr {
+            height: 475px;
+            overflow-y: scroll;
+            padding-right: 40px;
+
+            /* Устанавливаем ширину дорожки */
+            &::-webkit-scrollbar {
+                width: 2px;
+                /* Ширина дорожки для вертикального скроллбара */
+                height: 2px;
+                /* Ширина дорожки для горизонтального скроллбара */
+            }
+
+            /* Стили для дорожки */
+            &::-webkit-scrollbar-track {
+                background: #f0f0f0;
+                /* Цвет дорожки */
+            }
+
+            /* Стили для ползунка */
+            &::-webkit-scrollbar-thumb {
+                display: block;
+                background-color: #007bff;
+                /* Цвет ползунка */
+                width: 4px;
+                height: 4px;
+                /* Ширина ползунка */
+                border-radius: 2px;
+                /* Скругленные края ползунка */
+                border: 10px solid var(--primary);
+            }
+
+            /* Ползунок при наведении */
+            &::-webkit-scrollbar-thumb:hover {
+                background-color: #0056b3;
+                /* Цвет при наведении */
+            }
+            
+
+
+
+            * {
+                color: var(--text);
+                font-family: var(--fontFamily);
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 20px;
+                text-align: left;
+            }
+
+            p {
+                margin-bottom: 15px;
+                font-family: var(--fontFamily);
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 20px;
+                text-align: left;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+
+            }
+
+            blockquote {
+                padding: 20px 54px;
+                padding-right: 20px;
+                padding-bottom: 5px;
+                position: relative;
+                background: var(--background);
+                border-radius: 20px;
+                margin-bottom: 15px;
+
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 24px;
+                    height: 24px;
+                    left: 20px;
+                    background: url(./images/attention-img.svg);
+                    position: absolute;
+                }
+            }
+
+            ul li {
+                margin-bottom: 10px;
+                text-decoration: none;
+                padding-left: 18px;
+                list-style: none;
+                position: relative;
+                display: inline-block;
+
+                &:before {
+                    content: '•';
+                    position: absolute;
+                    left: -2px;
+                    top: -2px;
+                    font-size: 42px;
+                    color: var(--primary);
+                }
+            }
+
+            ul {
+                margin-bottom: 5px;
+            }
+
+            ol {
+                margin-bottom: 10px;
+                list-style-position: inside;
+            }
+
+            ol li {
+                margin-bottom: 5px;
+
+                &::marker {
+                    margin-right: 15px;
+                }
+            }
+        }
+
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 41% 1fr;
+        gap: 20px;
+    }
+
+    .text-img {
+        max-width: 630px;
+        max-height: 670px;
+        gap: 0px;
+        border-radius: 20px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+
+
+@media (max-width: 940px) {
+    #text-block .container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #text-block .text-img {
+        max-width: 450px;
+        max-height: auto;
+        margin: 0px auto;
+    }
+
+    #text-block .text__title {
+        margin-bottom: 20px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    #text-block .text__descr {
+        height: 320px;
+    }
+}

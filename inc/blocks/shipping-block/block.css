@@ -1,0 +1,126 @@
+#shipping-block {
+  margin-bottom: unset;
+  padding: 50px 0px;
+}
+#shipping-block .shipping__descr {
+  margin-bottom: 20px;
+}
+#shipping-block .shipping__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+#shipping-block .shipping__item {
+  padding: 40px;
+  padding-bottom: 50px;
+  background: var(--background);
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#shipping-block .shipping__item:hover .item__img {
+  transform: translateX(calc(100% - 150px));
+}
+#shipping-block .item {
+  position: relative;
+}
+#shipping-block .item__title {
+  margin-bottom: 30px;
+}
+#shipping-block .item__list {
+  margin-bottom: 60px;
+}
+#shipping-block .item__points {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+#shipping-block .item__img {
+  width: 100%;
+  position: relative;
+  max-height: 150px;
+  display: flex;
+  justify-content: flex-start;
+  transition: 0.8s transform ease-in-out;
+}
+#shipping-block .item__img img {
+  position: relative;
+  height: 100%;
+  max-width: 150px;
+  display: block;
+  width: 100%;
+}
+#shipping-block .point__left {
+  color: var(--text);
+}
+
+@media (max-width: 1600px) {
+  #shipping-block .shipping__item {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 1400px) {
+  #shipping-block .item__points {
+    display: flex;
+  }
+  #shipping-block .point__left {
+    width: 50%;
+    flex-grow: 1;
+    text-align: left;
+  }
+  #shipping-block .point__right {
+    width: 50%;
+    flex-grow: 1;
+    text-align: left;
+  }
+}
+
+@media (max-width: 1230px) {
+  #shipping-block .item__list {
+    margin-bottom: 10px;
+  }
+  #shipping-block .item__img {
+    max-height: 100px;
+    margin-top: auto;
+  }
+  #shipping-block .item__img img {
+    max-height: unset;
+    height: auto;
+    max-width: 100px;
+    object-fit: contain;
+  }
+  #shipping-block .item__title {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 992px) {
+  #shipping-block {
+    padding: 30px 0px !important;
+  }
+}
+@media (max-width:1100px) {
+  #shipping-block .shipping__list{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  #shipping-block .shipping__list {
+    display: flex;
+    flex-direction: column;
+  }
+  #shipping-block .shipping__item {
+    padding: 10px;
+  }
+  #shipping-block .item__points {
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  #shipping-block .item__img img,
+  #shipping-block .item__img {
+    max-height: 100px;
+  }
+}

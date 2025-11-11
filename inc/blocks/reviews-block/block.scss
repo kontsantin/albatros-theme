@@ -1,0 +1,31 @@
+#reviews-block {
+    .reviews {
+        padding-bottom: 40px;
+
+        &__container {
+            padding: 0;
+            max-width: 1350px;
+        }
+
+        &-swiper {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        &__title {
+            margin-bottom: 40px;
+        }
+
+        
+
+        
+
+
+    }
+
+    @media (max-width: 1240px) {
+        .reviews__container {
+            padding: 0 10px;
+        }
+    }
+}

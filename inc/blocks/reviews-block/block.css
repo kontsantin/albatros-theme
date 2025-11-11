@@ -1,0 +1,23 @@
+#reviews-block {
+  margin-bottom: unset;
+  padding: 50px 0px;
+}
+#reviews-block .reviews {
+  padding-bottom: 40px;
+}
+#reviews-block .reviews__container {
+  padding: 0;
+  max-width: 1350px;
+}
+#reviews-block .reviews-swiper {
+  width: 100%;
+  overflow: hidden;
+}
+#reviews-block .reviews__title {
+  margin-bottom: 40px;
+}
+@media (max-width: 1240px) {
+  #reviews-block .reviews__container {
+    padding: 0 10px;
+  }
+}/*# sourceMappingURL=block.css.map */
