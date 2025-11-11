@@ -1,0 +1,170 @@
+.custom-content-icons-block {
+    padding: 60px 0;
+}
+
+.content-icons-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.content-icons-wrapper.reversed {
+    direction: rtl;
+}
+
+.content-icons-wrapper.reversed > * {
+    direction: ltr;
+}
+
+.content-part {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+
+
+.icons-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.icon-image {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.icon-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.icon-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #666;
+}
+.icons-grid--with-text {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+}
+.icons-grid--with-text 
+.content-part p, .content-part li, .icon-text p, .content-text p{
+    margin-bottom: 15px;
+    font-family: var(--fontFamily);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+    text-underline-position: from-font;
+    -webkit-text-decoration-skip-ink: none;
+    text-decoration-skip-ink: none;
+    color: inherit;
+    max-width: 800px;
+}
+.content-text ul{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    list-style: none; /* убираем стандартные маркеры */
+    padding: 0;
+}
+
+.content-text ul li{
+    position: relative;
+    padding-left: 36px; /* место для иконки */
+    margin: 0 0 12px 0;
+}
+
+.content-text ul li::before{
+    content: "\2713"; /* галочка */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #0054F5; /* синий фон — подберите под дизайн */
+    color: #fff;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 1;
+}
+
+/* Мобильная версия: уменьшаем отступ и размер иконки */
+@media (max-width: 480px) {
+    .content-text ul li{
+        padding-left: 30px;
+    }
+    .content-text ul li::before{
+        width: 18px;
+        height: 18px;
+        font-size: 11px;
+    }
+}
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .content-icons-wrapper {
+        gap: 40px;
+    }
+    
+    .icons-grid {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-icons-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .icons-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .content-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-content-icons-block {
+        padding: 40px 0;
+    }    
+
+    .icons-grid {
+        gap: 25px;
+    }
+    .content-text ul{
+        margin-top: 20px;       
+        grid-template-columns: 1fr;
+        gap: 10px;        
+    }
+
+}

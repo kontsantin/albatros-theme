@@ -4,12 +4,15 @@ $align   = (isset($block['align']) && !empty($block['align'])) ? 'align'.$block[
 
 $fields = get_fields();
 
-$blockTitle = $fields['block_title'];
-$items = $fields['items'];
-$archiveLink = $fields['faq_archive_link'];
-$bgImageId = $fields['image-right'];
-$view_block = $fields['view_block'];
-if(empty($items)) return;
+// Use get_field() to safely obtain fields and avoid "undefined index" warnings
+$blockTitle  = get_field('block_title');
+$items       = get_field('items') ?: array();
+$archiveLink = get_field('faq_archive_link');
+$bgImageId   = get_field('image-right');
+$view_block  = get_field('view_block');
+
+// If there are no items, nothing to render
+if (empty($items)) return;
 ?>
 <div class="faq-five-block b-padding <?=$classes;?> <?=$align;?>">
     <div class="container">

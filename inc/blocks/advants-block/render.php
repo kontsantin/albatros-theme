@@ -18,8 +18,11 @@ $iconBgColor = get_field('icon-bg-color');
 $advantNameColor = get_field('advant-name-color');
 $advantDescColor = get_field('advant-desc-color');
 
+// Проверяем наличие изображения
+$img_class = empty($img) ? 'no-image' : '';
+
 ?>
-<div class="advants-block <?=$classes;?> <?=$align;?>"
+<div class="advants-block <?=$classes;?> <?=$align;?> <?=$img_class;?>"
     style="<?php if($blockPadd){ ?>padding:<?=$blockPadd?>;<?php } ?><?php if($bgColor){ ?>background-color:<?=$bgColor?>;<?php } ?>"
 >
     <div class="container">
@@ -68,3 +71,19 @@ $advantDescColor = get_field('advant-desc-color');
         </div>
     </div>
 </div>
+<style>
+    .advants-block.alignwide.no-image .wrapper  {
+        flex-direction: column;
+    }
+    .advants-block.alignwide.no-image .advants-left-side {
+        width: fit-content;
+    }
+    .advants-block.alignwide.no-image .advants {
+        grid-template-columns: repeat(3,1fr);
+        width: 100%;
+    }
+     .advants-block.alignwide.no-image .main-title {
+        text-align: start;
+          font-size: 28px;
+    }
+</style>
